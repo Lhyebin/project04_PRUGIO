@@ -1,0 +1,388 @@
+/* * {
+    outline: 1px solid tomato;
+} */
+
+.inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* <상단 메뉴바> */
+
+.header {
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    /* -> 레이어 제일 상단으로 올리도록 */
+}
+
+.header .inner {
+    display: flex;
+    align-items: center;
+    height: 70px;
+}
+
+.header img {
+    width: 130px;
+    cursor: pointer;
+}
+
+.header .gnb {
+    margin: 0 0 0 auto;
+    color: #fff;
+    font-size: 17px;
+}
+
+.header .gnb>ul {
+    display: flex;
+    gap: 50px;
+    margin: 0 200px 0 0;
+}
+
+.header i {
+    font-size: 25px;
+    margin: 0 0 0 30px;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* <상단 메인배너 - 다음,이전 화살표 아이콘> */
+.main_visual .arrows {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+
+    transform: translate(-100%, -50%);
+    margin: 0 0 0 700px;
+    padding: 0 15px;
+}
+
+.main_visual .arrows i {
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.7);
+    border: 2px solid rgba(255, 255, 255, 0.7);
+    padding: 12px;
+    border-radius: 10%;
+    cursor: pointer;
+}
+
+.main_visual .arrows i:hover {
+    color: rgba(255, 255, 255, 1);
+    border: 2px solid rgba(255, 255, 255, 1);
+}
+
+/* <상단 메인배너 - 다음 슬라이드 스테이 타임 > */
+.main_visual .menu {
+    position: absolute;
+    top: 400px;
+    left: 50%;
+
+    /* display: flex; */
+    gap: 0px;
+    transform: translate(0, 0);
+    margin: 0 0 0 -700px;
+    padding: 0 15px;
+}
+
+.main_visual .menu li {
+    position: relative;
+    width: 100px;
+    height: 30px;
+    margin: 15px auto;
+}
+
+.main_visual .menu li::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100px;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.main_visual .menu li::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 4px;
+    background: rgba(255, 255, 255, 1);
+}
+
+.main_visual .menu li.on::after {
+    width: 100%;
+    transition: 3s;
+}
+
+.main_visual .menu li a {
+    display: block;
+    color: rgba(255, 255, 255, 8);
+}
+
+.main_visual .menu li.on a {
+    color: rgba(255, 255, 255, 1);
+}
+
+
+
+
+
+/* <분양안내> */
+
+.main_content {
+    background: linear-gradient(180deg, #fff 53%, #ebebeb 47%);
+}
+
+.impormation {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 70px 0;
+}
+
+.impormation h2 {
+    text-align: left;
+    font-size: 27px;
+    font-weight: 700;
+    padding: 0 15px;
+}
+
+.impormation .inner {
+    overflow: hidden;
+}
+
+.impor {
+    margin: 0 -10px;
+}
+
+.impormation figure {
+    margin: 20px 0;
+    padding: 0 10px;
+}
+
+.impormation .cap {
+    padding: 20px 20px;
+    background: #fff;
+}
+
+.impormation h3 {
+    font-size: 20px;
+    font-weight: 500;
+    padding: 20px 0;
+}
+
+.impormation p {
+    font-size: 15px;
+    font-weight: 400;
+    padding: 0 0 20px 0;
+}
+
+.impormation figure a {
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 400;
+    padding: 2px 9px;
+    border: 1px solid #000;
+}
+
+.impormation figure a:hover {
+    background: #353d42;
+    color: #fff;
+}
+
+.impormation .all {
+    padding: 5px 0 0 0;
+    text-align: center;
+}
+
+.impormation .allbtn {
+    border: 1px solid #000;
+    padding: 7px 50px;
+}
+
+.impormation .allbtn:hover {
+    background: #353d42;
+    color: #fff;
+}
+
+/* <분양안내 - 다음페이지 클릭> */
+.impormation .arrows {
+    position: absolute;
+    display: flex;
+    gap: 10px;
+    transform: translate(-100%, -50%);
+
+    top: 90px;
+    right: -61px;
+}
+
+.impormation .arrows i {
+    font-size: 15px;
+    color: #000;
+    border: 1px solid #000;
+    padding: 8px;
+    border-radius: 10%;
+    cursor: pointer;
+}
+
+
+
+
+
+/* <푸르지오 소개> */
+.introduce {
+    position: relative;
+    padding: 100px 0 250px 0;
+}
+
+.title {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.introduce h2 {
+    text-align: left;
+    font-size: 27px;
+    font-weight: 700;
+}
+
+.introduce h3 {
+    text-align: left;
+    font-size: 18px;
+    font-weight: 400;
+    padding: 0 0 30px 0;
+}
+
+.introduce img {
+    width: 600px;
+    padding: 0 0 13px 0;
+}
+
+.introduce .intro_inner {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+    gap: 30px;
+}
+
+.introduce .tit strong {
+    text-align: left;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.introduce .intro_inner p {
+    text-align: left;
+    font-size: 15px;
+    padding: 7px 0;
+    word-break: keep-all;
+}
+
+.introduce .under {
+    position: relative;
+    top: 150px;
+}
+
+
+
+
+/* <푸르지오 갤러리 opaciiiiiii> */
+.bottom {
+    position: relative;
+    background: #353d42;
+    padding: 10px 0;
+}
+
+.bottom .gallery {
+    display: flex;
+    flex: 1;
+    background: #353d42;
+}
+
+.bottom .tit {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 80px;
+    font-weight: 500;
+    text-align: center;
+    color: transparent;
+    -webkit-text-stroke: 1px #fff;
+    z-index: 999;
+    word-break: keep-all;
+}
+
+.bottom figure {
+    border-radius: 10%;
+    overflow: hidden;
+    padding: 6px 6px;
+    opacity: 55%;
+}
+
+
+
+
+/* <위로 올라가는 버튼> */
+.to_top {
+    position: fixed;
+    bottom: 100px;
+    right: 100px;
+    z-index: 999;
+}
+
+.to_top i {
+    color: #fff;
+    background: #353d42;
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 10%;
+    cursor: pointer;
+}
+
+
+
+
+/* <footer> */
+.footer {
+    height: 140px;
+    background: #292f33;
+    color: #c4c4c4;
+    font-size: 15px;
+    padding: 55px 0;
+}
+
+.footer .foot_inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+    display: flex;
+}
+
+.footer img {
+    height: 17px;
+}
+
+.footer ul {
+    display: flex;
+    gap: 30px;
+    margin: 0 0 0 70px;
+}
+
+.footer .icn {
+    display: flex;
+    font-size: 25px;
+    gap: 20px;
+    cursor: pointer;
+    margin: 0 0 0 auto;
+}
